@@ -1,0 +1,74 @@
+import numpy as np
+english_score = np.array([55,89,76,65,48,70])
+math_score = np.array([60,85,60,68,np.nan,60])
+chinese_score = np.array([65,90,82,72,66,77])
+
+eng_max=np.nanmax(english_score)
+math_max=np.nanmax(math_score)
+chinese_max=np.nanmax(chinese_score)
+print("英文成績最大值", eng_max)
+print("數學成績最大值", math_max)
+print("國文成績最大值", chinese_max)
+
+eng_min=np.nanmin(english_score)
+math_min=np.nanmin(math_score)
+chinese_min=np.nanmin(chinese_score)
+print("英文成績最小值", eng_min)
+print("數學成績最小值",math_min)
+print("國文成績最小值",chinese_min)
+
+eng_mean = np.nanmean(english_score, axis=None, dtype=None)
+math_mean = np.nanmean(math_score, axis=None, dtype=None)
+chinese_mean = np.nanmean(chinese_score, axis=None, dtype=None)
+print("英文成績平均值", eng_mean)
+print("數學成績平均值", math_mean)
+print("國文成績平均值", chinese_mean)
+
+eng_std = np.nanstd(english_score, axis=None, dtype=None)
+math_std = np.nanstd(math_score, axis=None, dtype=None)
+chinese_std = np.nanstd(chinese_score, axis=None, dtype=None)
+print("英文成績標準差", eng_std)
+print("數學成績標準差", math_std)
+print("國文成績標準差", chinese_std)
+
+
+
+
+import numpy as np
+english_score = np.array([55,89,76,65,48,70])
+math_score = np.array([60,85,60,68,55,60])
+chinese_score = np.array([65,90,82,72,66,77])
+
+eng_max=np.nanmax(english_score)
+math_max=np.nanmax(math_score)
+chinese_max=np.nanmax(chinese_score)
+print("英文成績最大值", eng_max)
+print("數學成績最大值", math_max)
+print("國文成績最大值", chinese_max)
+
+eng_min=np.nanmin(english_score)
+math_min=np.nanmin(math_score)
+chinese_min=np.nanmin(chinese_score)
+print("英文成績最小值", eng_min)
+print("數學成績最小值",math_min)
+print("國文成績最小值",chinese_min)
+
+eng_mean = np.nanmean(english_score, axis=None, dtype=None)
+math_mean = np.nanmean(math_score, axis=None, dtype=None)
+chinese_mean = np.nanmean(chinese_score, axis=None, dtype=None)
+print("英文成績平均值", eng_mean)
+print("數學成績平均值", math_mean)
+print("國文成績平均值", chinese_mean)
+
+eng_std = np.nanstd(english_score, axis=None, dtype=None)
+math_std = np.nanstd(math_score, axis=None, dtype=None)
+chinese_std = np.nanstd(chinese_score, axis=None, dtype=None)
+print("英文成績標準差", eng_std)
+print("數學成績標準差", math_std)
+print("國文成績標準差", chinese_std)
+
+
+data1=np.correlate(chinese_score, math_score, mode='valid')
+data2=np.correlate(chinese_score, english_score, mode='valid')
+print(data1)
+print(data2)
